@@ -6,8 +6,8 @@ import os
 import time
 import unittest
 import HTMLTestRunner
-from Test_guanaijiajia.config import globalparameter as gl
-from Test_guanaijiajia.src.commom import send_mail
+from Auto_gajj.config import globalparameter as gl
+from Auto_gajj.src.commom import send_mail
 from appium import webdriver
 
 case_path = 'E:\\Work\\Workspace-python\\Test_guanaijiajia\\src\\test_case'

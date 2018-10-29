@@ -2,7 +2,7 @@
 # _*_coding:utf-8_*_
 # author:huxiaobo
 import unittest
-from Test_guanaijiajia.src.commom import driver_configure
+import driver_configure
 
 class Test(unittest.TestCase):
     def setUp(self):

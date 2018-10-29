@@ -9,7 +9,7 @@ import os.path
 import smtplib
 import sys
 # sys.path.append('E:\\Work\\Workspace-python\\Test_guanaijiajia\\config')
-from Test_guanaijiajia.config import globalparameter as gl
+from Auto_gajj.config import globalparameter as gl
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 

@@ -7,7 +7,7 @@ import time
 import unittest
 # import sys
 # sys.path.append('E:\\Work\\Workspace-python\\Test_guanaijiajia\\src\\commom')
-from Test_guanaijiajia.src.commom import driver_configure
+from Auto_gajj.src.commom import driver_configure
 from appium import webdriver
 
 class Test(unittest.TestCase):
