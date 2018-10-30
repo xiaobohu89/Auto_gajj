@@ -11,21 +11,16 @@ from Auto_gajj.src.commom import driver_configure
 from appium import webdriver
 
 class Test(unittest.TestCase):
-    def setUp(self):
-        # print ('initialize!')
-        desired_caps = {}
-        desired_caps['platformName'] = 'Android'
-        desired_caps['platformVersion'] = '4.4'   #测试机Android版本
-        desired_caps['deviceName'] = 'b2b4487b'   #测试机序列号 adb devices   vivo:b2b4487b
-        desired_caps['appPackage'] = 'com.ithooks.android.ccbxreap'     #被测app包名
-        desired_caps['appActivity'] = 'com.ithooks.android.ccbxreap.ui.index.ActivityIndex'#app启动的activity
-        desired_caps['newCommandTimeout'] = '300'
-        self.driver = webdriver.Remote('http://localhost:4723/wd/hub',desired_caps)
-        # print 'open app!'
-        time.sleep(10)
+    @classmethod
+    def setUpClass(cls):
+        dconfigur = driver_configure.driver_configure()
+        cls.driver = dconfigur.get_driver()
 
     def test01(self):
         u'''进入登录页面'''
+        self.driver.find_element_by_id("com.ithooks.android.ccbxreap:id/view_skip").click()
+        self.driver.find_element_by_id("com.ithooks.android.ccbxreap:id/btn_skip").click()
+        time.sleep(2)
         self.driver.find_element_by_id("com.ithooks.android.ccbxreap:id/tv_login").click()
         time.sleep(3)
         # self.driver.find_element_by_id("com.ithooks.android.ccbxreap:id/toolbar_title").click()

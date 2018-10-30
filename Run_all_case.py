@@ -10,8 +10,8 @@ from Auto_gajj.config import globalparameter as gl
 from Auto_gajj.src.commom import send_mail
 from appium import webdriver
 
-case_path = 'E:\\Work\\Workspace-python\\Test_guanaijiajia\\src\\test_case'
-suit = unittest.defaultTestLoader.discover(case_path,pattern='test_*.py',top_level_dir=None)
+case_path = 'E:\\Work\\Workspace-python\\Auto_gajj\\src\\test_case'
+discover = unittest.defaultTestLoader.discover(case_path,pattern='test_*.py',top_level_dir=None)
 # print discover
 
 if __name__=='__main__':
@@ -20,7 +20,7 @@ if __name__=='__main__':
     filename = gl.report_path + now + '_Report.html'
     fp = open(filename, 'wb')
     runner = HTMLTestRunner.HTMLTestRunner(stream=fp,title=u'测试报告',description=u'关爱加加功能自动化测试执行结果:')
-    runner.run(suit)
+    runner.run(discover)
     fp.close()
     # 发送邮件
     time.sleep(10)  # 设置睡眠时间，等待测试报告生成完毕（这里被坑了＝＝）

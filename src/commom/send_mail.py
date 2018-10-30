@@ -18,7 +18,7 @@ class send_email:
     def email_init(self,report,reportName):
         with open(report,'rb')as f:
             mail_body = f.read()
-        print(mail_body)
+        # print(mail_body)
         # 创建一个带附件的邮件实例
         msg = MIMEMultipart()
         # 以测试报告作为邮件正文
@@ -43,6 +43,8 @@ class send_email:
         report_list = os.listdir(gl.report_path)
         report_list.sort(key=lambda fn: os.path.getmtime(gl.report_path+fn) if not os.path.isdir(gl.report_path+fn) else 0)
         new_report = os.path.join(gl.report_path,report_list[-1])
-        # print (new_report)
+        # print (report_list)
         # 发送邮件
         self.email_init(new_report,report_list[-1])
+
+
