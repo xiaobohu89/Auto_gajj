@@ -10,8 +10,7 @@ from Auto_gajj.config import globalparameter as gl
 from Auto_gajj.src.commom import send_mail
 from appium import webdriver
 
-case_path = 'E:\\Work\\Workspace-python\\Auto_gajj\\src\\test_case'
-discover = unittest.defaultTestLoader.discover(case_path,pattern='test_*.py',top_level_dir=None)
+discover = unittest.defaultTestLoader.discover(gl.test_case_path,pattern='test_*.py',top_level_dir=None)
 # print discover
 
 if __name__=='__main__':

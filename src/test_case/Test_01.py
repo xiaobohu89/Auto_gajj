@@ -5,8 +5,7 @@
 import os
 import time
 import unittest
-# import sys
-# sys.path.append('E:\\Work\\Workspace-python\\Test_guanaijiajia\\src\\commom')
+# import img
 from Auto_gajj.src.commom import driver_configure
 from appium import webdriver
 
@@ -26,10 +25,11 @@ class Test(unittest.TestCase):
         # self.driver.find_element_by_id("com.ithooks.android.ccbxreap:id/toolbar_title").click()
         self.driver.find_element_by_id("com.ithooks.android.ccbxreap:id/et_phone").send_keys('18100000012')
         self.driver.find_element_by_id("com.ithooks.android.ccbxreap:id/et_pwd").send_keys('888888')
-        self.driver.get_screenshot_as_file('before_login.png')
+        self.driver.get_screenshot_as_file('E:\\Work\\Workspace-python\\Auto_gajj\\src\\image\\before_login.png')
+        # img.save("E:\\Work\\Workspace-python\\Auto_gajj\\src\\image\\before_login.png")
         self.driver.find_element_by_id("com.ithooks.android.ccbxreap:id/btn_login").click()
         time.sleep(10)
-        self.driver.get_screenshot_as_file('after_login.png')
+        self.driver.get_screenshot_as_file('E:\\Work\\Workspace-python\\Auto_gajj\\src\\image\\after_login.png')
 
     # def test02(self):
     #     u'''页面返回键退出铃音设置页面'''
